@@ -9,10 +9,24 @@ public class ImageData {
 
     private Bitmap selfie;
     private String name;
+    private String path;
+
+    public ImageData(Bitmap selfie, String name, String path) {
+        this.selfie = selfie;
+        this.name = name;
+        this.path = path;
+    }
 
     public ImageData(Bitmap selfie, String name) {
         this.selfie = selfie;
         this.name = name;
+        this.path = path;
+    }
+
+    public ImageData(String name, String path) {
+        this.selfie = null;
+        this.name = name;
+        this.path = path;
     }
 
     public Bitmap getSelfie() {
@@ -29,5 +43,13 @@ public class ImageData {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }
